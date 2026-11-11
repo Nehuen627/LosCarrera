@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospedaje los Carrera | Tu hogar lejos de casa</title>
+  <meta name="description"
+    content="Hospedaje Los Carrera en Osorno, Chile: habitaciones cómodas, departamentos familiares, desayuno incluido, estacionamiento y atención cálida." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#841F25',
+            secondary: '#DDA556',
+            background: '#F8F4EC',
+            surface: '#C69260',
+            dark: '#3C2115',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    html {
+      scroll-padding-top: 5rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-auto-rows: 14rem;
+    }
+
+    @media (min-width: 640px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .g-1 {
+        grid-column: span 2;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-auto-rows: 15rem;
+      }
+
+      .g-1 {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-background text-dark font-sans antialiased">
+
+  <header class="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-surface/30 shadow-sm">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between" aria-label="Principal">
+      <a href="#inicio" class="font-display text-xl sm:text-2xl font-bold text-primary flex items-center gap-2">
+        <i class="fa-solid fa-house-chimney text-secondary"></i>
+        Los Carrera
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 font-medium">
+        <li><a href="#inicio" class="hover:text-primary transition-colors">Inicio</a></li>
+        <li><a href="#servicios" class="hover:text-primary transition-colors">Servicios</a></li>
+        <li><a href="#resenas" class="hover:text-primary transition-colors">Reseñas</a></li>
+        <li><a href="#ubicacion" class="hover:text-primary transition-colors">Ubicación</a></li>
+        <li><a href="#contacto"
+            class="bg-primary text-white px-5 py-2 rounded-full hover:bg-secondary hover:text-dark transition-colors">Contacto</a>
+        </li>
+      </ul>
+
+      <button id="menu-btn"
+        class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg text-primary hover:bg-surface/20"
+        aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden border-t border-surface/30 bg-background">
+      <ul class="px-4 py-3 space-y-1 font-medium">
+        <li><a href="#inicio" class="block py-3 px-2 rounded hover:bg-surface/20">Inicio</a></li>
+        <li><a href="#servicios" class="block py-3 px-2 rounded hover:bg-surface/20">Servicios</a></li>
+        <li><a href="#resenas" class="block py-3 px-2 rounded hover:bg-surface/20">Reseñas</a></li>
+        <li><a href="#ubicacion" class="block py-3 px-2 rounded hover:bg-surface/20">Ubicación</a></li>
+        <li><a href="#contacto" class="block py-3 px-2 rounded bg-primary text-white text-center">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="relative min-h-[85vh] flex items-center justify-center text-center">
+      <img src="Captura de pantalla_20261111_123209.png"
+        alt="Fachada iluminada y entrada de Hospedaje Los Carrera" class="absolute inset-0 w-full h-full object-cover"
+        fetchpriority="high" />
+      <div class="absolute inset-0 bg-dark/65"></div>
+
+      <div class="relative z-10 max-w-3xl px-6 py-24">
+        <p class="mb-5 text-sm font-semibold tracking-widest uppercase text-white/75">
+          Hospedaje familiar · Osorno, Chile
+        </p>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          Bienvenidos a Hospedaje los Carrera
+        </h1>
+        <p class="mt-6 text-lg sm:text-xl text-white/90">
+          Descansá, recargá energías y sentite como en casa. Habitaciones cómodas, desayuno casero y una atención que no
+          vas a olvidar.
+        </p>
+        <a href="#contacto"
+          class="mt-10 inline-flex items-center gap-2 bg-primary text-white font-semibold text-lg px-8 py-4 rounded-full shadow-lg hover:bg-secondary hover:text-dark transition-colors focus:outline-none focus:ring-4 focus:ring-secondary/50">
+          Reservá tu estadía
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <section id="nosotros" class="bg-background py-20 sm:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <span class="text-primary font-semibold uppercase tracking-wider text-sm">Sobre nosotros</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-dark mt-2">Nuestra historia</h2>
+          <div class="w-16 h-1 bg-secondary rounded mt-4 mb-6"></div>
+          <p class="text-dark/80 leading-relaxed mb-4">
+            Ubicados en Los Carrera 2304, en Osorno, Región de Los Lagos, ofrecemos un espacio cálido, seguro y pensado
+            para el descanso de viajeros y familias. Contamos con habitaciones acogedoras revestidas en madera y
+            departamentos familiares con baño individual, agua caliente, desayuno incluido y Wi-Fi gratuito.
+          </p>
+          <p class="text-dark/80 leading-relaxed mb-4">
+            Atendido personalmente por su dueño, Manuel, nuestro hospedaje se destaca por su trato cercano y amable,
+            detalles de bienvenida como galletitas de cortesía, limpieza impecable y estacionamiento privado dentro del
+            recinto. Con una calificación de 4.4 estrellas respaldada por más de 160 reseñas en Google, muchos huéspedes
+            nos eligen una y otra vez como su lugar de confianza en Osorno.
+          </p>
+          <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-medium">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-secondary"></i> Atención directa
+              de su dueño, Manuel</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-secondary"></i> Habitaciones y
+              departamentos familiares</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-secondary"></i> Limpieza e
+              higiene impecable</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-secondary"></i> Seguridad y
+              estacionamiento privado</li>
+          </ul>
+        </div>
+        <div class="relative">
+          <div class="absolute -bottom-4 -right-4 w-full h-full rounded-2xl bg-surface/50" aria-hidden="true"></div>
+          <img src="Captura de pantalla_20261111_123242.png"
+            alt="Pasillo interior revestido en madera de Hospedaje Los Carrera"
+            class="relative rounded-2xl shadow-xl w-full h-80 sm:h-[26rem] object-cover" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="bg-surface/25 py-20 sm:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-primary font-semibold uppercase tracking-wider text-sm">Lo que ofrecemos</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold mt-2">Nuestros servicios</h2>
+          <div class="w-16 h-1 bg-secondary rounded mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article
+            class="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+            <div
+              class="w-16 h-16 mx-auto mb-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center text-2xl">
+              <i class="fa-solid fa-wifi"></i></div>
+            <h3 class="font-bold text-lg mb-2">Wi-Fi gratis</h3>
+            <p class="text-dark/70 text-sm">Conexión rápida y estable en todas las habitaciones y espacios comunes.</p>
+          </article>
+
+          <article
+            class="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+            <div
+              class="w-16 h-16 mx-auto mb-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center text-2xl">
+              <i class="fa-solid fa-mug-hot"></i></div>
+            <h3 class="font-bold text-lg mb-2">Desayuno incluido</h3>
+            <p class="text-dark/70 text-sm">Empezá el día con un desayuno casero, abundante y preparado cada mañana.</p>
+          </article>
+
+          <article
+            class="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+            <div
+              class="w-16 h-16 mx-auto mb-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center text-2xl">
+              <i class="fa-solid fa-bed"></i></div>
+            <h3 class="font-bold text-lg mb-2">Habitaciones y departamentos</h3>
+            <p class="text-dark/70 text-sm">Habitaciones cómodas y departamentos familiares, con agua caliente y
+              ambiente cálido.</p>
+          </article>
+
+          <article
+            class="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+            <div
+              class="w-16 h-16 mx-auto mb-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center text-2xl">
+              <i class="fa-solid fa-square-parking"></i></div>
+            <h3 class="font-bold text-lg mb-2">Estacionamiento privado</h3>
+            <p class="text-dark/70 text-sm">Espacio seguro dentro del recinto para guardar tu vehículo durante toda tu
+              estadía.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="resenas" class="bg-background py-20 sm:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-primary font-semibold uppercase tracking-wider text-sm">Opiniones</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold mt-2">Lo que dicen nuestros huéspedes</h2>
+          <div class="w-16 h-1 bg-secondary rounded mx-auto mt-4"></div>
+          <p class="mt-4 text-sm font-medium text-dark/75 flex items-center justify-center gap-2">
+            <i class="fa-brands fa-google text-primary"></i>
+            <span>4.4 / 5 estrellas · Basado en 161 reseñas en Google</span>
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <article class="bg-white rounded-2xl p-8 shadow-sm border border-surface/20 flex flex-col">
+            <div class="flex gap-1 text-secondary mb-4" aria-label="5 de 5 estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="text-dark/80 italic flex-1">
+              “El mejor lugar en Osorno. Vamos siempre, muy buena atención. Si buscas seguridad, estacionamiento,
+              higiene, buena atención... es ahí.”
+            </blockquote>
+            <footer class="mt-6 flex items-center gap-3">
+              <div
+                class="w-12 h-12 rounded-full bg-primary/15 text-primary font-bold flex items-center justify-center shrink-0"
+                aria-hidden="true">MC</div>
+              <div>
+                <p class="font-semibold">Monica Ester Carro Aranda</p>
+                <p class="text-xs text-dark/60"><i class="fa-brands fa-google"></i> Reseña de Google · Hace 7 meses</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="bg-white rounded-2xl p-8 shadow-sm border border-surface/20 flex flex-col">
+            <div class="flex gap-1 text-secondary mb-4" aria-label="5 de 5 estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="text-dark/80 italic flex-1">
+              “Muy buena atención de parte de Manuel, atento a nuestras necesidades. Lindo lugar, prolijo y accesible.
+              ¡Super recomendable!”
+            </blockquote>
+            <footer class="mt-6 flex items-center gap-3">
+              <div
+                class="w-12 h-12 rounded-full bg-secondary/25 text-dark font-bold flex items-center justify-center shrink-0"
+                aria-hidden="true">MA</div>
+              <div>
+                <p class="font-semibold">Mayra Albin</p>
+                <p class="text-xs text-dark/60"><i class="fa-brands fa-google"></i> Local Guide · Reseña de Google ·
+                  Hace 1 año</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="bg-white rounded-2xl p-8 shadow-sm border border-surface/20 flex flex-col">
+            <div class="flex gap-1 text-secondary mb-4" aria-label="5 de 5 estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="text-dark/80 italic flex-1">
+              “Recomendada opción para hospedarse en Osorno, super limpio, prolijo, cómodo y con lugar para guardar
+              vehículos. Tiene departamentos o habitaciones.”
+            </blockquote>
+            <footer class="mt-6 flex items-center gap-3">
+              <div
+                class="w-12 h-12 rounded-full bg-surface/35 text-dark font-bold flex items-center justify-center shrink-0"
+                aria-hidden="true">RG</div>
+              <div>
+                <p class="font-semibold">Roberto Gasquez</p>
+                <p class="text-xs text-dark/60"><i class="fa-brands fa-google"></i> Local Guide · Reseña de Google ·
+                  Hace 1 año</p>
+              </div>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="bg-surface/25 py-20 sm:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-primary font-semibold uppercase tracking-wider text-sm">Galería</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold mt-2">Conocé nuestros espacios</h2>
+          <div class="w-16 h-1 bg-secondary rounded mx-auto mt-4"></div>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="g-1 overflow-hidden rounded-2xl group cursor-zoom-in" data-lightbox>
+            <img src="Captura de pantalla_20261111_123806.png"
+              alt="Habitación familiar con tres camas y revestimiento en madera"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy" />
+          </figure>
+          <figure class="overflow-hidden rounded-2xl group cursor-zoom-in" data-lightbox>
+            <img src="Captura de pantalla_20261111_123225.png"
+              alt="Dormitorio con decoración cálida y luz natural"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy" />
+          </figure>
+          <figure class="overflow-hidden rounded-2xl group cursor-zoom-in" data-lightbox>
+            <img src="Captura de pantalla_20261111_123242.png"
+              alt="Pasillo interior cálido en madera hacia las habitaciones"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy" />
+          </figure>
+          <figure class="overflow-hidden rounded-2xl group cursor-zoom-in" data-lightbox>
+            <img src="Captura de pantalla_20261111_123842.png"
+              alt="Comedor y sala de desayuno del hospedaje"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy" />
+          </figure>
+          <figure class="overflow-hidden rounded-2xl group cursor-zoom-in" data-lightbox>
+            <img src="Captura de pantalla_20261111_123209.png"
+              alt="Vista exterior nocturna y estacionamiento del hospedaje"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="ubicacion" class="bg-background py-20 sm:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-primary font-semibold uppercase tracking-wider text-sm">Encontranos</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold mt-2">Ubicación y contacto</h2>
+          <div class="w-16 h-1 bg-secondary rounded mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14">
+          <div>
+            <ul class="space-y-4 mb-6">
+              <li class="flex items-start gap-4">
+                <span class="w-10 h-10 shrink-0 rounded-full bg-primary text-white flex items-center justify-center"><i
+                    class="fa-solid fa-location-dot"></i></span>
+                <div>
+                  <p class="font-semibold">Dirección</p>
+                  <p class="text-dark/75">Los Carrera 2304, 5310439 Osorno, Los Lagos, Chile</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="w-10 h-10 shrink-0 rounded-full bg-primary text-white flex items-center justify-center"><i
+                    class="fa-solid fa-phone"></i></span>
+                <div>
+                  <p class="font-semibold">Teléfono</p>
+                  <a href="tel:+56966502509" class="text-dark/75 hover:text-primary transition-colors">+56 9 6650
+                    2509</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="w-10 h-10 shrink-0 rounded-full bg-primary text-white flex items-center justify-center"><i
+                    class="fa-solid fa-clock"></i></span>
+                <div>
+                  <p class="font-semibold">Horarios de estadía</p>
+                  <p class="text-dark/75">Check-in: 14:00 hs · Check-out: 11:00 hs</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="w-full h-72 sm:h-80 rounded-lg overflow-hidden shadow-sm">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d757.6401660254521!2d-73.11245523382723!3d-40.57337820387423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9616366b672e0dfb%3A0x173808045d7e8ea6!2sAccommodation%20La%20Carrera!5e0!3m2!1sen!2sar!4v1794414073637!5m2!1sen!2sar"
+                title="Ubicación de Hospedaje Los Carrera en Google Maps"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                class="w-full h-full rounded-lg"></iframe>
+            </div>
+          </div>
+
+          <div id="contacto"
+            class="bg-surface/25 rounded-2xl p-8 sm:p-12 flex flex-col items-center justify-center text-center">
+            <h3 class="font-display text-2xl sm:text-3xl font-bold mb-3">Reserva directo por WhatsApp</h3>
+            <p class="text-dark/75 max-w-md mb-8">
+              Consultá disponibilidad, fechas y cantidad de huéspedes. Te respondemos de forma directa y a la brevedad.
+            </p>
+
+            <a href="https://wa.me/56966502509?text=Hola,%20quisiera%20consultar%20por%20alojamiento"
+              target="_blank" rel="noopener noreferrer"
+              class="mx-auto inline-flex items-center justify-center gap-3 bg-primary text-white text-lg sm:text-xl font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-secondary hover:text-dark transition-colors focus:outline-none focus:ring-4 focus:ring-secondary/50">
+              <i class="fa-brands fa-whatsapp text-2xl sm:text-3xl"></i>
+              Contactar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-background/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+      <p class="font-display text-2xl font-bold text-secondary">Hospedaje los Carrera</p>
+      <p class="text-sm text-background/70 mt-1">Tu hogar lejos de casa.</p>
+    </div>
+    <div class="border-t border-background/15 py-5 text-center text-sm text-background/60">
+      &copy; <span id="year"></span> Hospedaje los Carrera. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+    <button id="lightbox-close"
+      class="absolute top-4 right-5 text-white/80 hover:text-white text-4xl leading-none font-light focus:outline-none"
+      aria-label="Cerrar">&times;</button>
+    <img id="lightbox-img" src="" alt=""
+      class="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain select-none" />
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuBtn.querySelector('i');
+
+    function toggleMenu(forceClose = false) {
+      const open = forceClose ? false : mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden', !open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuIcon.className = open ? 'fa-solid fa-xmark text-xl' : 'fa-solid fa-bars text-xl';
+    }
+    menuBtn.addEventListener('click', () => toggleMenu());
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        const id = link.getAttribute('href');
+        if (id.length < 2) return;
+        const target = document.querySelector(id);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, '', id);
+        toggleMenu(true);
+      });
+    });
+
+    document.querySelectorAll('img').forEach(img => {
+      img.addEventListener('error', () => {
+        if (img.dataset.fallback) return;
+        img.dataset.fallback = '1';
+        img.src = 'https://placehold.co/1000x700/C69260/3C2115?text=Hospedaje+los+Carrera';
+      });
+    });
+
+    // Lightbox
+    const lightbox    = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    function openLightbox(src, alt) {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-lightbox] img').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+
+</html>
